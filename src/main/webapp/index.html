@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Theme Made By www.w3schools.com - No Copyright -->
+        <title>CA-1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="mainpage/script.js" defer></script>
+        <style>
+            /* Layout */
+            .main {
+                display: flex;
+                padding: 2em;
+                height: 90vh;
+                justify-content: center;
+                align-items: middle;
+            }
+
+            .clockbox,
+            #clock {
+                width: 100%;
+            }
+
+            /* Clock styles */
+            .circle {
+                fill: none;
+                stroke: #000;
+                stroke-width: 9;
+                stroke-miterlimit: 10;
+            }
+
+            .mid-circle {
+                fill: #000;
+            }
+            .hour-marks {
+                fill: none;
+                stroke: #000;
+                stroke-width: 9;
+                stroke-miterlimit: 10;
+            }
+
+            .hour-arm {
+                fill: none;
+                stroke: #000;
+                stroke-width: 17;
+                stroke-miterlimit: 10;
+            }
+
+            .minute-arm {
+                fill: none;
+                stroke: #000;
+                stroke-width: 11;
+                stroke-miterlimit: 10;
+            }
+
+            .second-arm {
+                fill: none;
+                stroke: #000;
+                stroke-width: 4;
+                stroke-miterlimit: 10;
+            }
+
+            /* Transparent box ensuring arms center properly. */
+            .sizing-box {
+                fill: none;
+            }
+
+            /* Make all arms rotate around the same center point. */
+            /* Optional: Use transition for animation. */
+            #hour,
+            #minute,
+            #second {
+                transform-origin: 300px 300px;
+                transition: transform .5s ease-in-out;
+            }
+
+            body {
+                font: 20px Montserrat, sans-serif;
+                line-height: 1.8;
+                color: #f5f6f7;
+            }
+            p {font-size: 16px;}
+            .margin {margin-bottom: 45px;}
+            .bg-1 { 
+                background-color: #1abc9c; /* Green */
+                color: #ffffff;
+            }
+            .bg-2 { 
+                background-color: #474e5d; /* Dark Blue */
+                color: #ffffff;
+            }
+            .bg-3 { 
+                background-color: #ffffff; /* White */
+                color: #555555;
+            }
+            .bg-4 { 
+                background-color: #2f2f2f; /* Black Gray */
+                color: #fff;
+            }
+            .container-fluid {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+            .container-fluid2 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            .navbar {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 0;
+                font-size: 12px;
+                letter-spacing: 5px;
+            }
+            .navbar-nav  li a:hover {
+                color: #1abc9c !important;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">Andreas Heick</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://andreasheick.dk">HOME PAGE</a></li>
+                        <li><a href="https://andreasheick.dk/HTTP/exercises.html">EXERCISES</a></li>
+                        <li><a href="https://andreasheick.dk/CA1/index.html">CA-1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- First Container -->
+        <div class="container-fluid2 bg-1 text-center">
+            <h1 class="margin">Course Assignment 1</h1>
+        </div>
+
+        <!-- Second Container -->
+        <div class="container-fluid bg-2 text-center">
+            <h2>Project Description</h2>
+            <br>
+            There is no business model involved with this CA.
+            Your task will be to produce a number of static HTML pages
+            with the sole purpose of “learning”.
+            They all include some JavaScript + DOM manipulation running 
+            on the client without any server interaction (AJAX).
+            When completed your pages must be hosted on a Tomcat Server
+            hosted on your own domain name and (for yellow and red groups)
+            only accessible via HTTPS.
+            <br>
+            <br>
+            <h3>Group Members</h3>
+            <br>
+            Andreas Guldborg Heick
+            <br>
+            <img src="pics/andreas.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Andreas" width="350" height="350">
+            <br>
+            André Borchersen
+            <br>
+            <img src="pics/andré.jpg" class="img-responsive img-circle margin" style="display:inline" alt="André" width="350" height="350">
+            <br>
+            Mohammad Hariri
+            <br>
+            <img src="pics/mohammad.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Mohammad" width="350" height="350">
+            <br>
+            Rasmus Jarnborg Friis
+            <br>
+            <img src="pics/rasmus.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Rasmus" width="350" height="350">
+            <br>
+            <br>
+            <h2>Links to CA-1 pages</h2>
+            <br>
+            <h3>Calculator</h3>
+            <a href="pages/calculator.html">LINK</a>
+            <h3>Typing Speed Tester</h3>
+            <a href="pages/typingspeedtester.html">LINK</a>
+            <h3>Dynamic UI manipulation</h3>
+            <a href="pages/uimanipulation.html">LINK</a>
+            <h3>Dynamic UI manipulation with data obtained via fetch</h3>
+            <a href="pages/fetchuimanipulation.html">LINK</a>
+        </div>
+
+        <!-- Third Container (Grid) -->
+        <div class="container-fluid2 bg-3 text-center">
+            <main class="main">
+                <div class="clockbox">
+                    <h3 id="demo"></h3>
+                    <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+                    <g id="face">
+                    <circle class="circle" cx="300" cy="300" r="253.9"/>
+                    <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
+                    <circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+                    </g>
+                    <g id="hour">
+                    <path class="hour-arm" d="M300.5 298V142"/>
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+                    </g>
+                    <g id="minute">
+                    <path class="minute-arm" d="M300.5 298V67"/>
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+                    </g>
+                    <g id="second">
+                    <path class="second-arm" d="M300.5 350V55"/>
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+                    </g>
+                    </svg>
+                </div><!-- .clockbox -->
+            </main>
+        </div>
+        <br>
+        <!-- Footer -->
+        <footer class="container-fluid bg-4 text-center">
+            <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+        </footer>
+
+    </body>
+</html>
